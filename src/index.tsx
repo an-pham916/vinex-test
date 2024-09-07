@@ -6,6 +6,8 @@ import "antd/dist/antd.css";
 import Router from "./router";
 import i18n from "./translation";
 
+import { createRoot } from 'react-dom/client'
+
 const App = () => (
   <BrowserRouter>
     <I18nextProvider i18n={i18n}>
@@ -14,4 +16,6 @@ const App = () => (
   </BrowserRouter>
 );
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(<App />, document.getElementById("root"));
+const root = createRoot(document.getElementById('root'));
+root.render(<App />)
